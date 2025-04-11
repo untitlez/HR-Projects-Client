@@ -1,0 +1,842 @@
+[
+    {
+      "id": 1,
+      "prefix": "Mrs.",
+      "firstName": "ราชัน",
+      "lastName": "นิษประปัญจ์",
+      "gender": "Male",
+      "email": "ephyphrrsaasangkhkrd@hotmail.com",
+      "phone": "+66 5800 0985",
+      "citizenId": "2-3310-58917-57-2",
+      "birthDate": "1980-09-26",
+      "address": "706/17 ถนนประจันตะเสน ทุ่งต่อ แม่ลาว ชลบุรี 59540, ลำพูน",
+      "province": "ลำพูน",
+      "position": "HR Officer",
+      "department": "Sales",
+      "startDate": "2023-08-16",
+      "employmentType": "Full-time",
+      "status": "Active",
+      "salary": 34117,
+      "leaveDays": {
+        "sickLeave": 4,
+        "personalLeave": 6,
+        "vacationLeave": 4
+      },
+      "yearsOfService": {
+        "years": 1,
+        "months": 7
+      }
+    },
+    {
+      "id": 2,
+      "prefix": "Mrs.",
+      "firstName": "หรรษธร",
+      "lastName": "ดุษฎีวนิช",
+      "gender": "Female",
+      "email": "echaawandiiwichaa@thnaakhaarchatrphiethiiyngkham.com",
+      "phone": "037-132002",
+      "citizenId": "2-9120-85986-85-2",
+      "birthDate": "1966-02-05",
+      "address": "63 ถนนนิษประปัญจ์ ต.บ้านบัวบานใหญ่ อ.ศรีสงคราม จ.เพชรบูรณ์ 43020, เชียงราย",
+      "province": "เชียงราย",
+      "position": "Marketing Specialist",
+      "department": "HR",
+      "startDate": "2019-04-25",
+      "employmentType": "Full-time",
+      "status": "Active",
+      "salary": 29437,
+      "leaveDays": {
+        "sickLeave": 6,
+        "personalLeave": 7,
+        "vacationLeave": 6
+      },
+      "yearsOfService": {
+        "years": 5,
+        "months": 11
+      }
+    },
+    {
+      "id": 3,
+      "prefix": "Ms.",
+      "firstName": "วันฉัตร",
+      "lastName": "ดาบเงิน",
+      "gender": "Female",
+      "email": "cchuthaaphrnedchwaa@haanghunswncchamkad.co.th",
+      "phone": "070965196",
+      "citizenId": "1-7716-10468-31-9",
+      "birthDate": "2001-12-31",
+      "address": "64 หมู่ 3 ต.โนนศิลา อ.ป้อมปราบศัตรูพ่าย อุดรธานี 83500, แพร่",
+      "province": "แพร่",
+      "position": "Sales Executive",
+      "department": "HR",
+      "startDate": "2019-02-18",
+      "employmentType": "Full-time",
+      "status": "Active",
+      "salary": 69154,
+      "leaveDays": {
+        "sickLeave": 10,
+        "personalLeave": 5,
+        "vacationLeave": 13
+      },
+      "yearsOfService": {
+        "years": 6,
+        "months": 1
+      }
+    },
+    {
+      "id": 4,
+      "prefix": "Mr.",
+      "firstName": "อนุวัช",
+      "lastName": "ถนัดการเขียน",
+      "gender": "Male",
+      "email": "edchkhumphanthuethph@smaakhmekhiiywkhuy.net.th",
+      "phone": "+66 (0) 861 575 594",
+      "citizenId": "6-3406-23985-35-3",
+      "birthDate": "1973-05-15",
+      "address": "2/4 ถนนเขียวอ่อน อ.คลองใหญ่ เชียงราย 75750, แพร่",
+      "province": "แพร่",
+      "position": "Backend Developer",
+      "department": "Finance",
+      "startDate": "2023-05-01",
+      "employmentType": "Temporary",
+      "status": "Resigned",
+      "salary": 47223,
+      "leaveDays": {
+        "sickLeave": 0,
+        "personalLeave": 3,
+        "vacationLeave": 0
+      },
+      "yearsOfService": {
+        "years": 1,
+        "months": 11
+      }
+    },
+    {
+      "id": 5,
+      "prefix": "Mrs.",
+      "firstName": "นิภา",
+      "lastName": "นากกนก",
+      "gender": "Female",
+      "email": "thnadrbthnkitt@haanghunswnsaamay.com",
+      "phone": "+66 (0) 2287 9922",
+      "citizenId": "3-5915-66443-45-8",
+      "birthDate": "2000-02-12",
+      "address": "8 ถนนราชมณี อุ่มเม่า นาแก สมุทรสงคราม 96350, ลำพูน",
+      "province": "ลำพูน",
+      "position": "Accountant",
+      "department": "Marketing",
+      "startDate": "2017-07-30",
+      "employmentType": "Temporary",
+      "status": "Probation",
+      "salary": 34500,
+      "leaveDays": {
+        "sickLeave": 5,
+        "personalLeave": 6,
+        "vacationLeave": 2
+      },
+      "yearsOfService": {
+        "years": 7,
+        "months": 8
+      }
+    },
+    {
+      "id": 6,
+      "prefix": "Mr.",
+      "firstName": "สุไฮลัน",
+      "lastName": "ตระกูลไม้เรียง",
+      "gender": "Female",
+      "email": "saaraphanthcchd@protonmail.com",
+      "phone": "+667 541 6764",
+      "citizenId": "7-2011-30347-34-1",
+      "birthDate": "1991-01-04",
+      "address": "323/5 ถ.นพตระกูล อ.บึงกุ่ม ขอนแก่น 92140, ลำปาง",
+      "province": "ลำปาง",
+      "position": "Sales Executive",
+      "department": "IT",
+      "startDate": "2023-09-19",
+      "employmentType": "Contract",
+      "status": "Probation",
+      "salary": 67336,
+      "leaveDays": {
+        "sickLeave": 9,
+        "personalLeave": 6,
+        "vacationLeave": 15
+      },
+      "yearsOfService": {
+        "years": 1,
+        "months": 6
+      }
+    },
+    {
+      "id": 7,
+      "prefix": "Ms.",
+      "firstName": "อาภัศรา",
+      "lastName": "ดุษฎีวนิช",
+      "gender": "Female",
+      "email": "trakuulaimeriiyngnriiratn@brisath.in.th",
+      "phone": "0958131163",
+      "citizenId": "5-7705-53528-80-1",
+      "birthDate": "1994-03-29",
+      "address": "77/18 ถนนศรีเผด็จ บ้านแท่น จ.ตราด 24580, พิจิตร",
+      "province": "พิจิตร",
+      "position": "Accountant",
+      "department": "Finance",
+      "startDate": "2018-04-01",
+      "employmentType": "Temporary",
+      "status": "Active",
+      "salary": 66447,
+      "leaveDays": {
+        "sickLeave": 4,
+        "personalLeave": 1,
+        "vacationLeave": 15
+      },
+      "yearsOfService": {
+        "years": 7,
+        "months": 0
+      }
+    },
+    {
+      "id": 8,
+      "prefix": "Mr.",
+      "firstName": "สมมล",
+      "lastName": "ยะผา",
+      "gender": "Female",
+      "email": "thraphysaarkhampliw@protonmail.com",
+      "phone": "+662 830 1898",
+      "citizenId": "8-1520-56073-96-4",
+      "birthDate": "1997-10-13",
+      "address": "51/95 ถนนทองเนื้อดี ตำบลหนองตอกแป้นใหม่ จังหวัดระนอง 61630, แพร่",
+      "province": "แพร่",
+      "position": "Marketing Specialist",
+      "department": "Finance",
+      "startDate": "2015-12-02",
+      "employmentType": "Contract",
+      "status": "Resigned",
+      "salary": 35093,
+      "leaveDays": {
+        "sickLeave": 1,
+        "personalLeave": 0,
+        "vacationLeave": 9
+      },
+      "yearsOfService": {
+        "years": 9,
+        "months": 4
+      }
+    },
+    {
+      "id": 9,
+      "prefix": "Ms.",
+      "firstName": "ภานิณี",
+      "lastName": "ถนัดภาษา",
+      "gender": "Male",
+      "email": "nduriyphanthu@kon.in.th",
+      "phone": "062 561 9821",
+      "citizenId": "8-7308-13703-87-4",
+      "birthDate": "1985-05-22",
+      "address": "199/1 ถ.ผลบุญ อำเภอเฉลิมพระเกียรติ จังหวัดฉะเชิงเทรา 75100, พิษณุโลก",
+      "province": "พิษณุโลก",
+      "position": "Marketing Specialist",
+      "department": "IT",
+      "startDate": "2020-05-18",
+      "employmentType": "Full-time",
+      "status": "Resigned",
+      "salary": 59745,
+      "leaveDays": {
+        "sickLeave": 0,
+        "personalLeave": 5,
+        "vacationLeave": 12
+      },
+      "yearsOfService": {
+        "years": 4,
+        "months": 10
+      }
+    },
+    {
+      "id": 10,
+      "prefix": "Mrs.",
+      "firstName": "สหัสมณี",
+      "lastName": "สงประเสริฐ",
+      "gender": "Female",
+      "email": "unksuphnunaay@gmail.com",
+      "phone": "+66 3848 2353",
+      "citizenId": "4-9610-56362-73-6",
+      "birthDate": "1971-09-08",
+      "address": "255/50 ถ.ติระคมน์ ต.อุ่มเม่า อ.หนองบัวแดง จ.อุตรดิตถ์ 93940, พิจิตร",
+      "province": "พิจิตร",
+      "position": "Sales Executive",
+      "department": "IT",
+      "startDate": "2019-06-13",
+      "employmentType": "Temporary",
+      "status": "Probation",
+      "salary": 35806,
+      "leaveDays": {
+        "sickLeave": 5,
+        "personalLeave": 6,
+        "vacationLeave": 5
+      },
+      "yearsOfService": {
+        "years": 5,
+        "months": 9
+      }
+    },
+    {
+      "id": 11,
+      "prefix": "Ms.",
+      "firstName": "เพ็ญยุภา",
+      "lastName": "ตวันเยี่ยม",
+      "gender": "Male",
+      "email": "sraayuththsantawngs@brisath.in.th",
+      "phone": "0626996440",
+      "citizenId": "6-7619-87954-22-2",
+      "birthDate": "1976-06-10",
+      "address": "40/52 ถนนเมืองสุข ต.ลำภูรา อ.บางสะพานน้อย จ.พัทลุง, พะเยา",
+      "province": "พะเยา",
+      "position": "Sales Executive",
+      "department": "Finance",
+      "startDate": "2018-05-06",
+      "employmentType": "Full-time",
+      "status": "Resigned",
+      "salary": 44808,
+      "leaveDays": {
+        "sickLeave": 3,
+        "personalLeave": 5,
+        "vacationLeave": 14
+      },
+      "yearsOfService": {
+        "years": 6,
+        "months": 11
+      }
+    },
+    {
+      "id": 12,
+      "prefix": "Mr.",
+      "firstName": "วณัฐดา",
+      "lastName": "ดาวกระจาย",
+      "gender": "Female",
+      "email": "cdatphanthu@haanghunswncchamkad.co.th",
+      "phone": "+66 (0) 3389 5737",
+      "citizenId": "7-1611-24328-28-5",
+      "birthDate": "1990-01-29",
+      "address": "029/27 ถ.เช้าวันดี ต.วัดปากทรง อ.หนอกจอก จ.สมุทรสาคร 52770, เชียงใหม่",
+      "province": "เชียงใหม่",
+      "position": "Frontend Developer",
+      "department": "HR",
+      "startDate": "2018-09-25",
+      "employmentType": "Contract",
+      "status": "Resigned",
+      "salary": 31374,
+      "leaveDays": {
+        "sickLeave": 7,
+        "personalLeave": 6,
+        "vacationLeave": 15
+      },
+      "yearsOfService": {
+        "years": 6,
+        "months": 6
+      }
+    },
+    {
+      "id": 13,
+      "prefix": "Mr.",
+      "firstName": "เฉลิมรัตน์",
+      "lastName": "ตวงทอง",
+      "gender": "Male",
+      "email": "hphlbuy@outlook.com",
+      "phone": "022 521809",
+      "citizenId": "8-6113-76732-82-3",
+      "birthDate": "1974-01-05",
+      "address": "2/5 ถนนเลขะพันธุ์ เขาสมิง อุตรดิตถ์ 82110, เชียงใหม่",
+      "province": "เชียงใหม่",
+      "position": "HR Officer",
+      "department": "Marketing",
+      "startDate": "2019-07-05",
+      "employmentType": "Temporary",
+      "status": "Active",
+      "salary": 19914,
+      "leaveDays": {
+        "sickLeave": 3,
+        "personalLeave": 6,
+        "vacationLeave": 2
+      },
+      "yearsOfService": {
+        "years": 5,
+        "months": 9
+      }
+    },
+    {
+      "id": 14,
+      "prefix": "Mr.",
+      "firstName": "สมนึก",
+      "lastName": "นาควงษ์",
+      "gender": "Male",
+      "email": "knaakhankhr@hcchkniymechiiym.in.th",
+      "phone": "042-803998",
+      "citizenId": "4-5204-74080-41-1",
+      "birthDate": "1997-09-06",
+      "address": "441 ถนนยะผา แม่ลาว กรุงเทพฯ 96530, แพร่",
+      "province": "แพร่",
+      "position": "Accountant",
+      "department": "Sales",
+      "startDate": "2022-08-28",
+      "employmentType": "Full-time",
+      "status": "Probation",
+      "salary": 38597,
+      "leaveDays": {
+        "sickLeave": 5,
+        "personalLeave": 5,
+        "vacationLeave": 15
+      },
+      "yearsOfService": {
+        "years": 2,
+        "months": 7
+      }
+    },
+    {
+      "id": 15,
+      "prefix": "Ms.",
+      "firstName": "เขมจิรา",
+      "lastName": "นานายน",
+      "gender": "Female",
+      "email": "rthuuphm@brisath.org",
+      "phone": "069 867 8388",
+      "citizenId": "2-4708-32570-83-7",
+      "birthDate": "1996-09-29",
+      "address": "4/7 ถ.นิลเสนา อิตื้อ หนองบัวระเหว ตาก 72610, ลำพูน",
+      "province": "ลำพูน",
+      "position": "Accountant",
+      "department": "HR",
+      "startDate": "2022-07-17",
+      "employmentType": "Temporary",
+      "status": "Active",
+      "salary": 56208,
+      "leaveDays": {
+        "sickLeave": 5,
+        "personalLeave": 4,
+        "vacationLeave": 4
+      },
+      "yearsOfService": {
+        "years": 2,
+        "months": 8
+      }
+    },
+    {
+      "id": 16,
+      "prefix": "Mrs.",
+      "firstName": "ภัทรนาฎ",
+      "lastName": "ตวันเยี่ยม",
+      "gender": "Female",
+      "email": "ochkhphaadlaethmthn@kon.in.th",
+      "phone": "039-060034",
+      "citizenId": "1-6711-07664-12-1",
+      "birthDate": "1974-09-19",
+      "address": "01/56 ถนนเณรานุสนธิ์ ตำบลบึงหัวงัว อำเภอเทพสถิต บึงกาฬ 88940, สุโขทัย",
+      "province": "สุโขทัย",
+      "position": "HR Officer",
+      "department": "Sales",
+      "startDate": "2018-09-19",
+      "employmentType": "Contract",
+      "status": "Resigned",
+      "salary": 44149,
+      "leaveDays": {
+        "sickLeave": 4,
+        "personalLeave": 5,
+        "vacationLeave": 9
+      },
+      "yearsOfService": {
+        "years": 6,
+        "months": 6
+      }
+    },
+    {
+      "id": 17,
+      "prefix": "Mr.",
+      "firstName": "ปิยวัจน์",
+      "lastName": "นิลเสนา",
+      "gender": "Female",
+      "email": "mchaphphrrnthnkuur@icloud.com",
+      "phone": "+66 (0) 3999 3473",
+      "citizenId": "5-5403-94276-56-2",
+      "birthDate": "1995-04-07",
+      "address": "0 ถ.ถิรสวัสดิ์ ต.สุขเดือนห้า อ.บ้านเขว้า ตราด 23860, แม่ฮ่องสอน",
+      "province": "แม่ฮ่องสอน",
+      "position": "Sales Executive",
+      "department": "IT",
+      "startDate": "2017-11-26",
+      "employmentType": "Full-time",
+      "status": "Probation",
+      "salary": 58520,
+      "leaveDays": {
+        "sickLeave": 6,
+        "personalLeave": 0,
+        "vacationLeave": 3
+      },
+      "yearsOfService": {
+        "years": 7,
+        "months": 4
+      }
+    },
+    {
+      "id": 18,
+      "prefix": "Mr.",
+      "firstName": "ทานตะวัน",
+      "lastName": "ธนรักษ์",
+      "gender": "Male",
+      "email": "nilsuwrrnkhampliw@brisath.in.th",
+      "phone": "0-7138-4019",
+      "citizenId": "7-9209-77870-06-4",
+      "birthDate": "1978-12-26",
+      "address": "27 หมู่ 9 ถ.นุตตาร เวียงแก่น บุรีรัมย์ 55530, เชียงใหม่",
+      "province": "เชียงใหม่",
+      "position": "Sales Executive",
+      "department": "HR",
+      "startDate": "2018-02-12",
+      "employmentType": "Full-time",
+      "status": "Active",
+      "salary": 74882,
+      "leaveDays": {
+        "sickLeave": 2,
+        "personalLeave": 0,
+        "vacationLeave": 1
+      },
+      "yearsOfService": {
+        "years": 7,
+        "months": 1
+      }
+    },
+    {
+      "id": 19,
+      "prefix": "Mr.",
+      "firstName": "วันฉัตร",
+      "lastName": "ยะผา",
+      "gender": "Male",
+      "email": "kulphaawlayophthisaty@outlook.com",
+      "phone": "0 7512 8471",
+      "citizenId": "2-1025-41353-58-3",
+      "birthDate": "1999-03-16",
+      "address": "9/4 ถนนถนอมมนุษย์ ต.เขากอบ อ.เฉลิมพระเกียรติ ปราจีนบุรี, แม่ฮ่องสอน",
+      "province": "แม่ฮ่องสอน",
+      "position": "Backend Developer",
+      "department": "IT",
+      "startDate": "2021-07-19",
+      "employmentType": "Temporary",
+      "status": "Active",
+      "salary": 20411,
+      "leaveDays": {
+        "sickLeave": 0,
+        "personalLeave": 6,
+        "vacationLeave": 15
+      },
+      "yearsOfService": {
+        "years": 3,
+        "months": 8
+      }
+    },
+    {
+      "id": 20,
+      "prefix": "Ms.",
+      "firstName": "ฌาฆีภัตฐ์",
+      "lastName": "ทองแท้",
+      "gender": "Male",
+      "email": "mnthngphsr@haanghunswncchamkad.com",
+      "phone": "029-262704",
+      "citizenId": "3-9217-87122-16-2",
+      "birthDate": "1989-12-01",
+      "address": "9/3 ถนนไทยแท้ ต.ลำภูรา อ.วังยาง สุพรรณบุรี 47880, พิจิตร",
+      "province": "พิจิตร",
+      "position": "Sales Executive",
+      "department": "IT",
+      "startDate": "2020-08-23",
+      "employmentType": "Contract",
+      "status": "Resigned",
+      "salary": 22623,
+      "leaveDays": {
+        "sickLeave": 3,
+        "personalLeave": 2,
+        "vacationLeave": 0
+      },
+      "yearsOfService": {
+        "years": 4,
+        "months": 7
+      }
+    },
+    {
+      "id": 21,
+      "prefix": "Ms.",
+      "firstName": "ณิชเชฏฐ์",
+      "lastName": "แน่นดุจป้อม",
+      "gender": "Male",
+      "email": "bthaawraayusm@hotmail.com",
+      "phone": "0-2695-9293",
+      "citizenId": "3-7803-58112-03-4",
+      "birthDate": "1977-06-23",
+      "address": "408/4 ถ.พานเกล้า ตำบลปังหวานใหญ่ อำเภอคอนสวรรค์ กรุงเทพมหานคร 43380, พิจิตร",
+      "province": "พิจิตร",
+      "position": "Accountant",
+      "department": "Marketing",
+      "startDate": "2018-06-07",
+      "employmentType": "Contract",
+      "status": "Active",
+      "salary": 56059,
+      "leaveDays": {
+        "sickLeave": 0,
+        "personalLeave": 2,
+        "vacationLeave": 8
+      },
+      "yearsOfService": {
+        "years": 6,
+        "months": 10
+      }
+    },
+    {
+      "id": 22,
+      "prefix": "Ms.",
+      "firstName": "บุญทิวา",
+      "lastName": "จันทา",
+      "gender": "Female",
+      "email": "namthiphyoythikaar@thnaakhaarsaastrsilp.com",
+      "phone": "+66 (0) 651 447 076",
+      "citizenId": "3-4715-83583-19-1",
+      "birthDate": "1976-02-28",
+      "address": "461 ถนนจันทา หนองบัวแดง กรุงเทพมหานคร 40900, พะเยา",
+      "province": "พะเยา",
+      "position": "Frontend Developer",
+      "department": "IT",
+      "startDate": "2016-11-07",
+      "employmentType": "Temporary",
+      "status": "Resigned",
+      "salary": 32574,
+      "leaveDays": {
+        "sickLeave": 4,
+        "personalLeave": 1,
+        "vacationLeave": 9
+      },
+      "yearsOfService": {
+        "years": 8,
+        "months": 5
+      }
+    },
+    {
+      "id": 23,
+      "prefix": "Mrs.",
+      "firstName": "ธีรลักษณ์",
+      "lastName": "ชุมวระ",
+      "gender": "Female",
+      "email": "cchakrkrnaayaithysuchaat@hotmail.com",
+      "phone": "+66 (0) 7703 3728",
+      "citizenId": "1-2901-07500-75-9",
+      "birthDate": "1970-12-17",
+      "address": "24 หมู่ 4 ถ.นิยมสำหรวจ ต.ยางตลาด อ.คลองใหญ่ ลพบุรี, กำแพงเพชร",
+      "province": "กำแพงเพชร",
+      "position": "Accountant",
+      "department": "HR",
+      "startDate": "2017-06-24",
+      "employmentType": "Contract",
+      "status": "Probation",
+      "salary": 31540,
+      "leaveDays": {
+        "sickLeave": 10,
+        "personalLeave": 1,
+        "vacationLeave": 5
+      },
+      "yearsOfService": {
+        "years": 7,
+        "months": 9
+      }
+    },
+    {
+      "id": 24,
+      "prefix": "Ms.",
+      "firstName": "นัฐพล",
+      "lastName": "ศิวะวรเวท",
+      "gender": "Female",
+      "email": "eecchriyramy@protonmail.com",
+      "phone": "+66 (0) 961 053 685",
+      "citizenId": "3-8704-37924-27-8",
+      "birthDate": "1990-02-03",
+      "address": "230 ถนนธรรมเมธา ตำบลบัวบาน อำเภอเขาสมิง กาญจนบุรี 72820, กำแพงเพชร",
+      "province": "กำแพงเพชร",
+      "position": "Backend Developer",
+      "department": "IT",
+      "startDate": "2017-06-05",
+      "employmentType": "Contract",
+      "status": "Active",
+      "salary": 33244,
+      "leaveDays": {
+        "sickLeave": 0,
+        "personalLeave": 1,
+        "vacationLeave": 5
+      },
+      "yearsOfService": {
+        "years": 7,
+        "months": 10
+      }
+    },
+    {
+      "id": 25,
+      "prefix": "Ms.",
+      "firstName": "กิ่งแก้ว",
+      "lastName": "ทองสีไพล",
+      "gender": "Female",
+      "email": "cchinphathtaa89@thnadklueng-thnraks.co.th",
+      "phone": "+66 (0) 642 278 789",
+      "citizenId": "8-9204-50052-40-8",
+      "birthDate": "1978-06-22",
+      "address": "53 หมู่ 8 ถนนหอมพิกุล คลองขามกลาง จ.กรุงเทพฯ 18770, พิษณุโลก",
+      "province": "พิษณุโลก",
+      "position": "Accountant",
+      "department": "IT",
+      "startDate": "2022-01-26",
+      "employmentType": "Full-time",
+      "status": "Probation",
+      "salary": 74198,
+      "leaveDays": {
+        "sickLeave": 0,
+        "personalLeave": 2,
+        "vacationLeave": 2
+      },
+      "yearsOfService": {
+        "years": 3,
+        "months": 2
+      }
+    },
+    {
+      "id": 26,
+      "prefix": "Mrs.",
+      "firstName": "วิทูลย์",
+      "lastName": "นามเสวตร",
+      "gender": "Male",
+      "email": "pracchin39@haanghunswnsaamay.go.th",
+      "phone": "043-320900",
+      "citizenId": "1-9407-30075-20-6",
+      "birthDate": "1964-11-24",
+      "address": "880/4 ซ.ดุษฎีวนิช ตำบลบัวบานเล็ก จังหวัดระยอง 27370, กำแพงเพชร",
+      "province": "กำแพงเพชร",
+      "position": "HR Officer",
+      "department": "Marketing",
+      "startDate": "2015-09-24",
+      "employmentType": "Contract",
+      "status": "Resigned",
+      "salary": 66294,
+      "leaveDays": {
+        "sickLeave": 7,
+        "personalLeave": 4,
+        "vacationLeave": 12
+      },
+      "yearsOfService": {
+        "years": 9,
+        "months": 6
+      }
+    },
+    {
+      "id": 27,
+      "prefix": "Mr.",
+      "firstName": "ธเนษฐ",
+      "lastName": "บุญศล",
+      "gender": "Female",
+      "email": "htansthity@icloud.com",
+      "phone": "+66 653 391 812",
+      "citizenId": "7-1718-66229-16-4",
+      "birthDate": "1999-11-24",
+      "address": "623/6 ถ.มิ่งขวัญ ตำบลหัวนาคำ อำเภอแม่ลาว สุราษฎร์ธานี 46050, พิจิตร",
+      "province": "พิจิตร",
+      "position": "Accountant",
+      "department": "IT",
+      "startDate": "2022-05-18",
+      "employmentType": "Full-time",
+      "status": "Resigned",
+      "salary": 69224,
+      "leaveDays": {
+        "sickLeave": 6,
+        "personalLeave": 2,
+        "vacationLeave": 12
+      },
+      "yearsOfService": {
+        "years": 2,
+        "months": 10
+      }
+    },
+    {
+      "id": 28,
+      "prefix": "Ms.",
+      "firstName": "นารดา",
+      "lastName": "ธูปะวิโรจน์",
+      "gender": "Female",
+      "email": "thnmkulbutrosphn@icloud.com",
+      "phone": "0-5186-7810",
+      "citizenId": "2-1518-26071-24-1",
+      "birthDate": "1969-04-15",
+      "address": "12 หมู่ 58 ถนนเจริญรัมย์ ตำบลปังหวาน อำเภอคอนสวรรค์ จังหวัดน่าน 93530, ลำพูน",
+      "province": "ลำพูน",
+      "position": "Accountant",
+      "department": "Finance",
+      "startDate": "2017-08-17",
+      "employmentType": "Full-time",
+      "status": "Resigned",
+      "salary": 73936,
+      "leaveDays": {
+        "sickLeave": 2,
+        "personalLeave": 2,
+        "vacationLeave": 12
+      },
+      "yearsOfService": {
+        "years": 7,
+        "months": 7
+      }
+    },
+    {
+      "id": 29,
+      "prefix": "Mrs.",
+      "firstName": "เสรี",
+      "lastName": "ขำเอนก",
+      "gender": "Male",
+      "email": "yaphaapwiin@haanghunswnsaamay.co.th",
+      "phone": "02 604 5692",
+      "citizenId": "1-9101-79869-66-3",
+      "birthDate": "1980-06-16",
+      "address": "66/74 ถนนราชมณี ตำบลบางดี อำเภอบางสะพานน้อย จังหวัดพิจิตร 61910, แม่ฮ่องสอน",
+      "province": "แม่ฮ่องสอน",
+      "position": "Accountant",
+      "department": "Sales",
+      "startDate": "2018-04-21",
+      "employmentType": "Full-time",
+      "status": "Resigned",
+      "salary": 64857,
+      "leaveDays": {
+        "sickLeave": 6,
+        "personalLeave": 5,
+        "vacationLeave": 14
+      },
+      "yearsOfService": {
+        "years": 6,
+        "months": 11
+      }
+    },
+    {
+      "id": 30,
+      "prefix": "Ms.",
+      "firstName": "เสรี",
+      "lastName": "ขำเอนก",
+      "gender": "Female",
+      "email": "siriladdaanirahaanii@bmcchenuuengnnth.com",
+      "phone": "+662 852 6606",
+      "citizenId": "7-3719-37887-92-2",
+      "birthDate": "1976-03-26",
+      "address": "87 หมู่ 7 ถ.นักสำหรวจ เวียงแก่น สงขลา 91240, แม่ฮ่องสอน",
+      "province": "แม่ฮ่องสอน",
+      "position": "Sales Executive",
+      "department": "Marketing",
+      "startDate": "2017-11-01",
+      "employmentType": "Temporary",
+      "status": "Resigned",
+      "salary": 69367,
+      "leaveDays": {
+        "sickLeave": 9,
+        "personalLeave": 3,
+        "vacationLeave": 8
+      },
+      "yearsOfService": {
+        "years": 7,
+        "months": 5
+      }
+    }
+  ]
