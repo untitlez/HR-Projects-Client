@@ -1,5 +1,4 @@
 import {
-  HistoryOutlined,
   PieChartOutlined,
   SolutionOutlined,
   TeamOutlined,
@@ -24,23 +23,16 @@ export const menuItems = [
     label: "Leave Management",
     icon: <SolutionOutlined />,
     children: [
-      { key: "sub2-1", type: "leaveManagement", label: "Approval" },
-      { key: "sub2-2", type: "leaveManagement", label: "Calendar" },
+      { key: "sub2-1", type: "approval", label: "Approval" },
     ],
   },
   {
     key: "menu3",
-    label: "Time Attendance",
-    icon: <HistoryOutlined />,
-    children: [{ key: "sub3-1", type: "timeAttendance", label: "Time Attendance" }],
-  },
-  {
-    key: "menu4",
-    label: "Reports & Analytics",
+    label: "Employee",
     icon: <PieChartOutlined />,
     children: [
-      { key: "sub4-1", type: "reports", label: "Reports" },
-      { key: "sub4-2", type: "reports", label: "Analytics" },
+      { key: "sub3-1", type: "reports", label: "All Employee" },
+      { key: "sub3-2", type: "new employee", label: "New Employee" },
     ],
   },
 ];

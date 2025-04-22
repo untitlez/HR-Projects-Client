@@ -1,33 +1,31 @@
 import { useState } from "react";
-import { ConfigProvider, Layout, Menu, theme } from "antd";
-import { ToggleTheme } from "./components/ToggleTheme";
-import { Content } from "antd/es/layout/layout";
+import { Layout, Menu } from "antd";
+import { Content, Header } from "antd/es/layout/layout";
 import Sider from "antd/es/layout/Sider";
-import { EmployeeList } from "./pages/hr/EmployeeList";
+import { ToggleTheme } from "./components/ToggleTheme";
 import { Account } from "./components/Account";
-import { menuItems } from "./constants/menuItem";
+import { ConfigTheme } from "./components/ConfigTheme";
+import { menuItems } from "./pages/admin/constants/menuItem";
+import { AdminTable } from "./pages/admin/AdminTable";
+import { AdminForm } from "./pages/admin/AdminForm";
 
 export default function HrHome() {
-  const [dark, setDark] = useState(true);
   const [tabsMenu, setTabsMenu] = useState("");
 
   const handleClick = (e) => {
-    const items = menuItems.flatMap((menu) => menu.children);
-    const pathItems = items.find((item) => item.key === e.key);
-    setTabsMenu(pathItems);
+    const subMenu = menuItems.flatMap((menu) => menu.children);
+    const items = subMenu.find((item) => item.key === e.key);
+    setTabsMenu(items);
   };
 
   return (
     <>
-      <ConfigProvider
-        theme={{
-          algorithm: dark ? theme.darkAlgorithm : theme.defaultAlgorithm,
-        }}
-      >
-        <Layout className="min-h-screen gap-2 p-4">
-          <Sider width="20%" style={{ background: "none" }}>
+      <ConfigTheme>
+        <Layout style={layoutStyle.layout}>
+          {/* Menu Bar  */}
+          <Sider width="20%" style={layoutStyle.sider}>
             <Menu
-              className="h-full rounded-2xl "
+              style={layoutStyle.menu}
               onClick={handleClick}
               defaultSelectedKeys={["1"]}
               defaultOpenKeys={["menu1"]}
@@ -35,16 +33,63 @@ export default function HrHome() {
               items={menuItems}
             />
           </Sider>
-          <Content className="flex flex-col">
-            <div className="flex justify-end items-center gap-4 py-4">
-              <p className="text-2xl flex-1 ml-4">{tabsMenu.label}</p>
-              <ToggleTheme dark={dark} setDark={setDark} />
-              <Account />
-            </div>
-            <EmployeeList tabsMenu={tabsMenu} className="min-h-screen"/>
-          </Content>
+
+          <Layout style={layoutStyle.content}>
+            {/* Header & Toggle Theme & Account  */}
+            <Header style={layoutStyle.header}>
+              <p style={layoutStyle.text}>{tabsMenu.label}</p>
+              <div style={layoutStyle.account}>
+                <ToggleTheme />
+                <Account />
+              </div>
+            </Header>
+
+            {/* Table  */}
+            <Content>
+              {tabsMenu.type === "new employee" ? (
+                <AdminForm />
+              ) : (
+                <AdminTable tabsMenu={tabsMenu} />
+              )}
+            </Content>
+          </Layout>
         </Layout>
-      </ConfigProvider>
+      </ConfigTheme>
     </>
   );
 }
+
+// Style
+const layoutStyle = {
+  layout: {
+    gap: 8,
+    padding: 16,
+  },
+  sider: {
+    background: "none",
+  },
+  header: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 0,
+    background: "none",
+  },
+  text: {
+    fontSize: "1.5rem",
+    marginLeft: "16px",
+  },
+  account: {
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    gap: "16px",
+  },
+  content: {
+    minHeight: "100vh",
+  },
+  menu: {
+    height: "100%",
+    borderRadius: "1rem",
+  },
+};

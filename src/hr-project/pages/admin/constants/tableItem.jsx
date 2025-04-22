@@ -1,10 +1,11 @@
-import { Button } from "antd";
+import { UsersInfo } from "../../../components/admin/UsersInfo";
+import { ApprovalConfirm } from "../../../components/admin/ApprovalConfirm";
 
 export const allColumns = [
   {
     title: "Name",
     dataIndex: "fullName",
-    key: "name",
+    key: "fullName",
   },
   {
     title: "Gender",
@@ -44,7 +45,7 @@ export const allColumns = [
   {
     title: "Action",
     key: "action",
-    render: () => <Button>Edit</Button>,
+    render: (_, record) => <UsersInfo record={record} />,
   },
 ];
 
@@ -52,7 +53,7 @@ export const positionColumns = [
   {
     title: "Name",
     dataIndex: "fullName",
-    key: "name",
+    key: "fullName",
   },
   {
     title: "Type",
@@ -82,7 +83,7 @@ export const positionColumns = [
   {
     title: "Action",
     key: "action",
-    render: () => <Button>Edit</Button>,
+    render: (_, record) => <UsersInfo record={record} />,
   },
 ];
 
@@ -90,7 +91,7 @@ export const leaveColumns = [
   {
     title: "Name",
     dataIndex: "fullName",
-    key: "name",
+    key: "fullName",
   },
   {
     title: "Position",
@@ -103,73 +104,28 @@ export const leaveColumns = [
     key: "employmentType",
   },
   {
-    title: "Sick Leave",
-    key: "sickLeave",
-    render: (_, record) => record.leaveDays.sickLeave ?? "-",
+    title: "Leave Type",
+    key: "leaveType",
+    render: (_, record) => record.approval?.leaveType || null,
   },
   {
-    title: "Personal Leave",
-    key: "personalLeave",
-    render: (_, record) => record.leaveDays.personalLeave ?? "-",
+    title: "Days",
+    key: "days",
+    render: (_, record) => record.approval?.days || null,
   },
   {
-    title: "Vacation Leave",
-    key: "vacationLeave",
-    render: (_, record) => record.leaveDays.vacationLeave ?? "-",
+    title: "Leave Date",
+    key: "leaveDate",
+    render: (_, record) => record.approval?.leaveDate || null,
   },
   {
-    title: "Action",
-    key: "action",
-    render: () => {
-      return (
-        <>
-          <Button type="primary" className="mr-2">Yes</Button>
-          <Button danger>No</Button>
-        </>
-      );
-    },
-  },
-];
-
-export const timeColumns = [
-  {
-    title: "Name",
-    dataIndex: "fullName",
-    key: "name",
-  },
-  {
-    title: "Position",
-    dataIndex: "position",
-    key: "position",
-  },
-  {
-    title: "Time In",
-    dataIndex: "เวลาเข้างาน",
-    key: "timeIn",
-  },
-  {
-    title: "Time Out",
-    dataIndex: "เวลาออกงาน",
-    key: "timeOut",
-  },
-  {
-    title: "Sick Leave",
-    key: "sickLeave",
-    render: (_, record) => record.leaveDays.sickLeave ?? "-",
-  },
-  {
-    title: "Personal Leave",
-    key: "personalLeave",
-    render: (_, record) => record.leaveDays.personalLeave ?? "-",
-  },
-  {
-    title: "Vacation Leave",
-    key: "vacationLeave",
-    render: (_, record) => record.leaveDays.vacationLeave ?? "-",
+    title: "Note",
+    key: "note",
+    render: (_, record) => record.approval?.note || null,
   },
   {
     title: "Action",
     key: "action",
-    render: () => <Button danger>View Report</Button>
+    render: () => <ApprovalConfirm />,
   },
 ];

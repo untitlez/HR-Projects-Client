@@ -3,16 +3,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import {
   allColumns,
-  positionColumns,
   leaveColumns,
-  timeColumns,
-} from "../../constants/columnItem";
+  positionColumns,
+} from "./constants/TableItem";
 
-export const EmployeeList = ({ tabsMenu, ...rest }) => {
+export const AdminTable = ({ tabsMenu }) => {
+  // Fetch Data
   const URL = "/src/hr-project/data.json";
   const [users, setUsers] = useState([]);
-  
-  // Fetch Data
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -26,27 +25,24 @@ export const EmployeeList = ({ tabsMenu, ...rest }) => {
     fetchData();
   }, []);
 
-  // Tab Menu to >> Data Table 
-  const positions = users.filter((item) => item.position === tabsMenu.label);
-  const leave = users.filter((item) => item.leaveDays);
+  // Tab Menu to >> Data Table
+  const position = users.filter((item) => item.position === tabsMenu.label);
+  const leave = users.filter((item) => item.approval);
 
   const useTableConfig = () => {
     if (tabsMenu.type === "position") {
-      return { columns: positionColumns, data: positions };
+      return { columns: positionColumns, data: position };
     }
-  
-    if (tabsMenu.type === "leaveManagement") {
+
+    if (tabsMenu.type === "approval") {
       return { columns: leaveColumns, data: leave };
     }
-    
-    if (tabsMenu.type === "timeAttendance") {
-      return { columns: timeColumns, data: leave };
-    }
-  
+
     return { columns: allColumns, data: users };
   };
-  
+
+  // Default Table
   const { columns, data } = useTableConfig();
-  
-  return <Table rowKey="id" columns={columns} dataSource={data} {...rest} />;
+
+  return <Table rowKey="id" columns={columns} dataSource={data} />;
 };
