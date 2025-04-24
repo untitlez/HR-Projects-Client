@@ -1,8 +1,9 @@
 import { ConfigProvider, theme } from "antd";
-import { useHrStore } from "../store/store";
+import { useThemeStore } from "../store/store";
+import { Background } from "./Background";
 
 export const ConfigTheme = ({ children }) => {
-  const { dark } = useHrStore();
+  const { dark } = useThemeStore();
 
   return (
     <ConfigProvider
@@ -10,6 +11,7 @@ export const ConfigTheme = ({ children }) => {
         algorithm: dark ? theme.darkAlgorithm : theme.defaultAlgorithm,
       }}
     >
+      <Background/>
       {children}
     </ConfigProvider>
   );

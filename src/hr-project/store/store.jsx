@@ -1,6 +1,22 @@
 import { create } from "zustand";
 
-export const useHrStore = create((set) => ({
+export const useThemeStore = create((set) => ({
   dark: true,
   setDark: () => set((state) => ({ dark: !state.dark })),
+}));
+
+export const useActionStore = create((set) => ({
+  loading: false,
+  setLoading: (value) => set({ loading: value }),
+
+  disabled: false,
+  setDisabled: (value) => set({ disabled: value }),
+}));
+
+export const useMenuStore = create((set) => ({
+  tabsMenu: { label: "", type: "" },
+  setTabsMenu: (value) => set({ tabsMenu: value }),
+
+  collapsed: true,
+  setCollapsed: () => set((state) => ({ collapsed: !state.collapsed })),
 }));

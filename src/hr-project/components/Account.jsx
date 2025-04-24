@@ -1,13 +1,26 @@
-import { Button } from "antd";
+import { useNavigate } from "react-router-dom";
+import { Button, Popconfirm } from "antd";
 
-export const Account = () => {
+export const Account = ({ fullName, position }) => {
+  const navigate = useNavigate();
+  const onConfirm = () => navigate("/");
+
   return (
-    <Button size="large">
-      <img className="rounded-md w-8 h-8" src="shiba.jpg" alt="avatar" />
-      <div className="text-sm">
-        <p>Shiba</p>
-        <p className="text-xs opacity-75">HR Officer</p>
-      </div>
-    </Button>
+    <Popconfirm
+      placement="bottomRight"
+      title="Log Out"
+      description="Are you sure you want to log out?"
+      okText="Yes"
+      cancelText="No"
+      onConfirm={onConfirm}
+    >
+      <Button size="large">
+        <img className="rounded-md w-8 h-8" src="shiba.jpg" alt="avatar" />
+        <div className="text-sm">
+          <p>{fullName}</p>
+          <p className="text-xs opacity-75">{position}</p>
+        </div>
+      </Button>
+    </Popconfirm>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button, Modal, Descriptions } from "antd";
 
 export const UsersInfo = ({ record }) => {

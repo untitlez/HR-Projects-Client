@@ -1,9 +1,8 @@
-import React from "react";
 import { Switch } from "antd";
-import { useHrStore } from "../store/store";
+import { useThemeStore } from "../store/store";
 
 export const ToggleTheme = () => {
-  const { dark, setDark } = useHrStore();
+  const { dark, setDark } = useThemeStore();
   return (
     <Switch
       checkedChildren="Dark"

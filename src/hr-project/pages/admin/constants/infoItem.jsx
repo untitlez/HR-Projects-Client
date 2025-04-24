@@ -11,6 +11,7 @@ export const allColumns = [
     title: "Gender",
     dataIndex: "gender",
     key: "gender",
+    responsive: ['xl'],
   },
   {
     title: "Position",
@@ -26,6 +27,7 @@ export const allColumns = [
     title: "Start Date",
     dataIndex: "startDate",
     key: "startDate",
+    responsive: ['xl'],
   },
   {
     title: "Status",
@@ -64,6 +66,7 @@ export const positionColumns = [
     title: "Start Date",
     dataIndex: "startDate",
     key: "startDate",
+    responsive: ['md'],
   },
   {
     title: "Service (Years)",
@@ -104,6 +107,12 @@ export const leaveColumns = [
     key: "employmentType",
   },
   {
+    title: "Phone",
+    dataIndex: "phone",
+    key: "phone",
+    responsive: ['xl'],
+  },
+  {
     title: "Leave Type",
     key: "leaveType",
     render: (_, record) => record.approval?.leaveType || null,
@@ -121,6 +130,7 @@ export const leaveColumns = [
   {
     title: "Note",
     key: "note",
+    responsive: ['xl'],
     render: (_, record) => record.approval?.note || null,
   },
   {

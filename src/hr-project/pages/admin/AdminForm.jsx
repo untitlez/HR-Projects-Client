@@ -1,9 +1,10 @@
+import { useState } from "react";
 import { Form, message } from "antd";
-import { JobSection, PersonalSection } from "./constants/inputItem";
 import dayjs from "dayjs";
+
 import { SubmitForm } from "../../components/admin/SubmitForm";
 import { SuccessPage } from "../../components/SuccessPage";
-import { useState } from "react";
+import { JobSection, PersonalSection } from "./constants/inputItem";
 
 export const AdminForm = () => {
   const [form] = Form.useForm();
