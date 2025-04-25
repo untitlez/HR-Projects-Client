@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Form, message } from "antd";
+import { Form, message, Modal } from "antd";
 import dayjs from "dayjs";
+import { useActionStore } from "../../store/store";
 
 import { SubmitForm } from "../../components/admin/SubmitForm";
 import { SuccessPage } from "../../components/SuccessPage";
@@ -9,15 +9,21 @@ import { JobSection, PersonalSection } from "./constants/inputItem";
 export const AdminForm = () => {
   const [form] = Form.useForm();
   const [messageApi, contextHolder] = message.useMessage();
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const {
+    loading,
+    setLoading,
+    isSubmitted,
+    setIsSubmitted,
+    isModalOpen,
+    setIsModalOpen,
+  } = useActionStore();
 
-  const onFinish = (values) => {
-    console.log("Success:", values);
-    setIsSubmitted(true);
+  const onFinish = () => {
+    setLoading(true);
+    setIsModalOpen(true);
   };
 
-  const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
+  const onFinishFailed = () => {
     messageApi.error("Please complete all required fields.");
   };
 
@@ -42,7 +48,20 @@ export const AdminForm = () => {
       yearsOfService: 5,
       salary: 12000,
     });
-    messageApi.success("Form has been auto-filled. You can make changes if needed.");
+    messageApi.success(
+      "Form has been auto-filled. You can make changes if needed."
+    );
+  };
+
+  const handleOk = () => {
+    setIsSubmitted(true);
+    setIsModalOpen(false);
+    setLoading(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+    setLoading(false);
   };
   return (
     <>
@@ -68,7 +87,17 @@ export const AdminForm = () => {
 
           <div className={styleForm.layoutInput}>
             <JobSection />
-            <SubmitForm onReset={onReset} onFill={onFill} />
+            <SubmitForm loading={loading} onReset={onReset} onFill={onFill} />
+            <Modal
+              title="Confirm New Employee"
+              open={isModalOpen}
+              onOk={handleOk}
+              onCancel={handleCancel}
+              okText="Add Employee"
+              cancelText="Cancel"
+            >
+              <p>Are you sure you want to add this employee to the system?</p>
+            </Modal>
           </div>
         </Form>
       )}

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import { Form } from "antd";
+import { Form, notification } from "antd";
 import { useActionStore } from "../../store/store";
 import { loginItem } from "./constants/loginItem";
 import { accounts } from "./constants/accountData";
@@ -8,6 +8,8 @@ import { accounts } from "./constants/accountData";
 import { ButtonLogin } from "../../components/auth/ButtonLogin";
 
 export const LoginForm = () => {
+  const [api, contextHolder] = notification.useNotification();
+
   const [form] = Form.useForm();
   const navigate = useNavigate();
 
@@ -21,15 +23,29 @@ export const LoginForm = () => {
     setDisabled(true);
 
     setTimeout(() => {
-      if (form.getFieldValue("role") === "admin") navigate("/admin");
-      if (form.getFieldValue("role") === "employee") navigate("/employee");
-      setLoading(false);
-      setDisabled(false);
+      switch (form.getFieldValue("role")) {
+        case "admin":
+          navigate("/admin");
+          break;
+        case "employee":
+          navigate("/employee");
+          break;
+
+        default:
+          api.error({
+            message: "Login failed",
+            description:
+              "Please check your credentials and select an available account",
+          });
+          setLoading(false);
+          setDisabled(false);
+      }
     }, 3000);
   };
 
   return (
     <>
+      {contextHolder}
       <Form
         name="login"
         form={form}

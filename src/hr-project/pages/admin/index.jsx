@@ -16,7 +16,7 @@ import { AdminInfo } from "./AdminInfo";
 export default function AdminHome() {
   const [users, setUsers] = useState([]);
   const { tabsMenu } = useMenuStore();
-  const URL = "/src/hr-project/data.json";
+  const URL = "/data.json";
 
   useEffect(() => {
     async function fetchData() {
@@ -24,7 +24,7 @@ export default function AdminHome() {
         const { data } = await axios.get(URL);
         setUsers(data);
       } catch (error) {
-        console.error("error :", error);
+        throw error("Sorry, something went wrong.", error);
       }
     }
     fetchData();
