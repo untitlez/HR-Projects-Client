@@ -1,27 +1,21 @@
 import { Form, Input, Radio, InputNumber } from "antd";
 
-export function LeaveFormItem({ personal }) {
+export function LeaveFormItem() {
   const leaveSectionItem = [
     {
       label: "Full Name",
       name: "fullName",
-      input: <Input variant="filled" defaultValue={personal.fullName} />,
+      input: <Input variant="filled" />,
     },
     {
       label: "Position",
       name: "position",
-      input: <Input variant="filled" defaultValue={personal.position} />,
+      input: <Input variant="filled" />,
     },
     {
       label: "Phone Number",
       name: "phone",
-      input: (
-        <InputNumber
-          variant="filled"
-          defaultValue={personal.phone}
-          style={{ width: "100%" }}
-        />
-      ),
+      input: <InputNumber variant="filled" style={{ width: "100%" }} />,
     },
     {
       label: "Leave Type",

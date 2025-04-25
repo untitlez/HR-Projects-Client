@@ -1,7 +1,7 @@
 const randomValue = (min, max) => Math.random() * (max - min) + min;
-const colors = ["#3b60f9", "#34d2eb", "#ff6b6b", "#1a1c2c", "#2235e5"];
+const colors = ["#4285F4", "#EA4335", "#6A1B9A", "#34A853"];
 
-export const Background = ({ count = 3 }) => {
+export const Background = ({ count = 4 }) => {
   const circles = Array.from({ length: count }).map((_, i) => {
     const size = randomValue(200, 400);
     const style = {
@@ -22,4 +22,3 @@ export const Background = ({ count = 3 }) => {
 
   return <div className="fixed inset-0 overflow-hidden">{circles}</div>;
 };
-

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Button, Form, message, Modal } from "antd";
 import { useActionStore } from "../../store/store";
 
@@ -6,11 +5,16 @@ import { SuccessPage } from "../../components/SuccessPage";
 import { LeaveFormItem } from "./constants/inputItem";
 
 export const LeaveForm = ({ personal }) => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const { loading, setLoading } = useActionStore();
   const [form] = Form.useForm();
   const [messageApi, contextHolder] = message.useMessage();
+  const {
+    loading,
+    setLoading,
+    isSubmitted,
+    setIsSubmitted,
+    isModalOpen,
+    setIsModalOpen,
+  } = useActionStore();
 
   const onFinish = () => {
     setLoading(true);
@@ -31,6 +35,7 @@ export const LeaveForm = ({ personal }) => {
     setIsModalOpen(false);
     setLoading(false);
   };
+
   return (
     <>
       {contextHolder}
@@ -45,6 +50,11 @@ export const LeaveForm = ({ personal }) => {
           labelCol={{ span: 6 }}
           wrapperCol={{ span: 16 }}
           autoComplete="on"
+          initialValues={{
+            fullName: personal.fullName,
+            position: personal.position,
+            phone: personal.phone,
+          }}
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >

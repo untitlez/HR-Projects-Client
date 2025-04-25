@@ -11,12 +11,15 @@ export const useActionStore = create((set) => ({
 
   disabled: false,
   setDisabled: (value) => set({ disabled: value }),
+
+  isSubmitted: false,
+  setIsSubmitted: (value) => set({ isSubmitted: value }),
+
+  isModalOpen: false,
+  setIsModalOpen: (value) => set({ isModalOpen: value }),
 }));
 
 export const useMenuStore = create((set) => ({
   tabsMenu: { label: "", type: "" },
   setTabsMenu: (value) => set({ tabsMenu: value }),
-
-  collapsed: true,
-  setCollapsed: () => set((state) => ({ collapsed: !state.collapsed })),
 }));

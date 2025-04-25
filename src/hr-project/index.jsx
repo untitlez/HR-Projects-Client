@@ -11,7 +11,7 @@ export default function HomePage() {
       <ConfigTheme>
         <Layout className="h-screen relative">
           <Content width="100%" className="grid place-content-center">
-            <Background count={5} />
+            <Background />
             <Card title="Sign In" className="w-full max-w-sm">
               <LoginForm />
             </Card>

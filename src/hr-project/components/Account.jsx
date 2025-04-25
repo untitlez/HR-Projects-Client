@@ -8,10 +8,9 @@ export const Account = ({ fullName, position }) => {
   return (
     <Popconfirm
       placement="bottomRight"
-      title="Log Out"
-      description="Are you sure you want to log out?"
-      okText="Yes"
-      cancelText="No"
+      title="Confirm Log Out"
+      description="Are you sure you want to sign out?"
+      okText="Log Out"
       onConfirm={onConfirm}
     >
       <Button size="large">
