@@ -17,18 +17,23 @@ export const LoginForm = () => {
 
   const adminAccount = () => form.setFieldsValue(accounts.admin);
   const employeeAccount = () => form.setFieldsValue(accounts.employee);
+  const setStatusAction = (status) => {
+    setLoading(status);
+    setDisabled(status);
+  };
 
   const onLogin = () => {
-    setLoading(true);
-    setDisabled(true);
+    setStatusAction(true);
 
     setTimeout(() => {
       switch (form.getFieldValue("role")) {
         case "admin":
           navigate("/admin");
+          setStatusAction(false);
           break;
         case "employee":
           navigate("/employee");
+          setStatusAction(false);
           break;
 
         default:
@@ -37,8 +42,7 @@ export const LoginForm = () => {
             description:
               "Please check your credentials and select an available account",
           });
-          setLoading(false);
-          setDisabled(false);
+          setStatusAction(false);
       }
     }, 3000);
   };

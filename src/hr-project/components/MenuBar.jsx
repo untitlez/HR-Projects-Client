@@ -3,7 +3,7 @@ import { Menu } from "antd";
 import { useMenuStore } from "../store/store";
 
 export const MenuBar = ({ menuItems, type, label, ...rest }) => {
-  const { setTabsMenu, collapsed } = useMenuStore();
+  const { setTabsMenu } = useMenuStore();
 
   useEffect(() => {
     setTabsMenu({ type, label });
@@ -16,19 +16,13 @@ export const MenuBar = ({ menuItems, type, label, ...rest }) => {
   };
 
   return (
-    <>
-      {collapsed ? (
-        <Menu
-          mode="inline"
-          defaultOpenKeys={["menu1", "menu2", "menu3"]}
-          className="h-full rounded-xl"
-          {...rest}
-          items={menuItems}
-          onClick={handleClick}
-        />
-      ) : (
-        ""
-      )}
-    </>
+    <Menu
+      mode="inline"
+      defaultOpenKeys={["menu1", "menu2", "menu3"]}
+      className="h-full rounded-xl"
+      {...rest}
+      items={menuItems}
+      onClick={handleClick}
+    />
   );
 };

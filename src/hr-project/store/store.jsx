@@ -22,7 +22,4 @@ export const useActionStore = create((set) => ({
 export const useMenuStore = create((set) => ({
   tabsMenu: { label: "", type: "" },
   setTabsMenu: (value) => set({ tabsMenu: value }),
-
-  collapsed: true,
-  setCollapsed: () => set((state) => ({ collapsed: !state.collapsed })),
 }));
