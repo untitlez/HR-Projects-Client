@@ -1,7 +1,9 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./hr-project";
-import AdminHome from "./hr-project/pages/admin";
-import EmployeePage from "./hr-project/pages/employee";
+import { Analytics } from "@vercel/analytics/react";
+
+import HomePage from "./pages";
+import AdminHome from "./pages/admin";
+import EmployeePage from "./pages/employee";
 
 export default function App() {
   return (
@@ -11,6 +13,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/admin" element={<AdminHome />} />
           <Route path="/employee" element={<EmployeePage />} />
+          <Analytics />
         </Routes>
       </HashRouter>
     </>
