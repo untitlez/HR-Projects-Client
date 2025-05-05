@@ -13,9 +13,9 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/admin" element={<AdminHome />} />
           <Route path="/employee" element={<EmployeePage />} />
-          <Analytics />
         </Routes>
       </HashRouter>
+      <Analytics />
     </>
   );
 }
