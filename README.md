@@ -2,8 +2,6 @@
 
 > Minimal, fast, and ready-to-code React setup for internal HR tools using Vite.
 
-![Banner](/banner.webp)
-
 ---
 
 ## ✨ Features
