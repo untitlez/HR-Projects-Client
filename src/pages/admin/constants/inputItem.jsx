@@ -1,10 +1,4 @@
-import {
-  Form,
-  Input,
-  DatePicker,
-  Radio,
-  InputNumber,
-} from "antd";
+import { Form, Input, DatePicker, Radio, InputNumber } from "antd";
 
 // Input Personal Admin Form
 export function PersonalSection() {

@@ -11,7 +11,7 @@ export const ConfigTheme = ({ children }) => {
         algorithm: dark ? theme.darkAlgorithm : theme.defaultAlgorithm,
       }}
     >
-      <Background/>
+      <Background />
       {children}
     </ConfigProvider>
   );

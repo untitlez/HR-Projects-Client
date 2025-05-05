@@ -2,8 +2,6 @@
 
 > Minimal, fast, and ready-to-code React setup for internal HR tools using Vite.
 
-![React + Vite Banner](./assets/react-vite-banner.png)
-
 ---
 
 ## ✨ Features
@@ -22,3 +20,14 @@
 ```bash
 git clone https://github.com/your-org/hr-projects.git
 cd hr-projects
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Start the development server
+```bash
+npm run dev
+```

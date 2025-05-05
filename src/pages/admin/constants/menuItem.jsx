@@ -22,9 +22,7 @@ export const menuItems = [
     key: "menu2",
     label: "Leave Management",
     icon: <SolutionOutlined />,
-    children: [
-      { key: "sub2-1", type: "approval", label: "Approval" },
-    ],
+    children: [{ key: "sub2-1", type: "approval", label: "Approval" }],
   },
   {
     key: "menu3",

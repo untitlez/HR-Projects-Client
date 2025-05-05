@@ -16,7 +16,7 @@ export const ButtonLogin = ({ onLogin, adminAccount, employeeAccount }) => {
       </Button>
       <Divider plain>Login with</Divider>
       <Flex gap="middle">
-        {accountItem.map((item,i) => (
+        {accountItem.map((item, i) => (
           <Button block key={i} disabled={disabled} onClick={item.onFill}>
             {item.label}
           </Button>

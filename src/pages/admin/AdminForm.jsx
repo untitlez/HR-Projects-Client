@@ -49,7 +49,7 @@ export const AdminForm = () => {
       salary: 12000,
     });
     messageApi.success(
-      "Form has been auto-filled. You can make changes if needed."
+      "Form has been auto-filled. You can make changes if needed.",
     );
   };
 

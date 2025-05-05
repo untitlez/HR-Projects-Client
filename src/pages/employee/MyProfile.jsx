@@ -18,7 +18,7 @@ export const MyProfile = ({ personal, leaveDays, tabsMenu }) => {
 
   const isLeaveDays = (leaveType) => {
     const leaveTypes = leaveDays.filter(
-      (leave) => leave.leaveType === leaveType
+      (leave) => leave.leaveType === leaveType,
     );
     return leaveDayItems.map((item) => ({
       key: item.key,

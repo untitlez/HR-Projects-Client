@@ -40,10 +40,18 @@ export const UsersInfo = ({ record }) => {
       >
         <Descriptions column={1} bordered size="small">
           {infoUsers.map((key) => (
-            <Descriptions.Item label={<span className="capitalize">{key}</span>}>{record[key]}</Descriptions.Item>
+            <Descriptions.Item
+              label={<span className="capitalize">{key}</span>}
+            >
+              {record[key]}
+            </Descriptions.Item>
           ))}
           {infoLeaveDays.map((key) => (
-            <Descriptions.Item label={<span className="capitalize">{key}</span>}>{record.leaveDays[key]}</Descriptions.Item>
+            <Descriptions.Item
+              label={<span className="capitalize">{key}</span>}
+            >
+              {record.leaveDays[key]}
+            </Descriptions.Item>
           ))}
         </Descriptions>
       </Modal>
