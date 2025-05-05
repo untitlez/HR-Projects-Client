@@ -1,9 +1,9 @@
 import { Card, Layout } from "antd";
 import { Content } from "antd/es/layout/layout";
 
-import { ConfigTheme } from "./components/ConfigTheme";
-import { Background } from "./components/Background";
-import { LoginForm } from "./pages/auth";
+import { ConfigTheme } from "../components/ConfigTheme";
+import { Background } from "../components/Background";
+import { LoginForm } from "./auth";
 
 export default function HomePage() {
   return (
