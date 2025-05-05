@@ -16,7 +16,7 @@ import { AdminInfo } from "./AdminInfo";
 export default function AdminHome() {
   const [users, setUsers] = useState([]);
   const { tabsMenu } = useMenuStore();
-  const URL = "/data.json";
+  const URL = "/src/data.json";
 
   useEffect(() => {
     async function fetchData() {
