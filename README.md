@@ -34,5 +34,63 @@ npm run dev
 ```
 
 ### 4. Open in Browser
-
+```plaintext
 http://localhost:3000
+```
+
+---
+
+## 🧱 Project Structure
+
+```plaintext
+/src
+├── App.jsx
+├── main.jsx
+├── index.css
+│
+├── store/
+│   └── store.js
+│
+├── components/
+│   ├── Account.jsx
+│   ├── BackGround.jsx
+│   ├── ConfigTheme.jsx
+│   ├── MenuBar.jsx
+│   ├── SuccessPage.jsx
+│   ├── ToggleTheme.jsx
+│   ├── admin/
+│   │   ├── ApprovalConfirm.jsx
+│   │   ├── SubmitForm.jsx
+│   │   └── UsersInfo.jsx
+│   └── auth/
+│       └── ButtonLogin.jsx
+│
+├── pages/
+│   ├── index.jsx
+│   ├── admin/
+│   │   ├── index.jsx
+│   │   ├── AdminForm.jsx
+│   │   ├── AdminInfo.jsx
+│   │   └── constants/
+│   │       ├── infoItem.jsx
+│   │       ├── inputItem.jsx
+│   │       └── menuItem.jsx
+│   ├── auth/
+│   │   ├── index.jsx
+│   │   └── constants/
+│   │       ├── accountData.jsx
+│   │       └── loginItem.jsx
+│   └── employee/
+│       ├── index.jsx
+│       ├── LeaveForm.jsx
+│       ├── MyProfile.jsx
+│       └── constants/
+│           ├── infoItem.jsx
+│           ├── inputItem.jsx
+│           ├── menuItem.jsx
+│           └── personalData.jsx
+```
+
+---
+
+
