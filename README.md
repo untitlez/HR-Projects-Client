@@ -1,4 +1,4 @@
-# ⚛️ React + Vite Starter ( HR Projects )
+# ⚛️  HR Projects (React + Vite)
 
 > Minimal, fast, and ready-to-code React setup for internal HR tools using Vite.
 
