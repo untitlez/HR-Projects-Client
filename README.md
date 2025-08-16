@@ -19,8 +19,8 @@
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-org/hr-projects.git
-cd hr-projects
+git clone https://github.com/untitlez/HR-Projects.git
+cd HR-Projects
 ```
 
 ### 2. Install dependencies
