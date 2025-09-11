@@ -1,24 +1,3 @@
-export const personal = {
-  userName: "employee",
-  passWord: "employee1234",
-  fullName: "Shiba Inu",
-  gender: "Male",
-  email: "shiba.inu@example.com",
-  address: "123 Doggo Street, Tokyo, Japan",
-  phone: "089 123 4567",
-  citizenId: "1-2345-67890-12-3",
-  birthDate: "1995-08-15",
-  position: "Frontend Developer",
-  startDate: "2021-06-01",
-  yearsOfService: 3,
-  salary: 35000,
-  leaveDays: {
-    sickLeave: 10,
-    personalLeave: 2,
-    vacationLeave: 6,
-  },
-};
-
 export const leaveDays = [
   {
     leaveType: "Sick",

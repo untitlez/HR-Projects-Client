@@ -1,18 +1,50 @@
 import { useState } from "react";
+import axios from "axios";
 import { Button, message, Popconfirm, Space } from "antd";
 
-export const ApprovalConfirm = () => {
+import { Config } from "../../lib/config";
+import { routes } from "../../lib/routes";
+
+export const ApprovalConfirm = ({ id, approval, leaveDays }) => {
   const [messageApi, contextHolder] = message.useMessage();
   const [disabled, setDisabled] = useState(false);
 
-  const Approve = () => {
-    messageApi.success("The request has been approved successfully.");
-    setDisabled(true);
+  const Approve = async () => {
+    try {
+      const newLeaveDays = {
+        ...leaveDays,
+        [approval.leaveType]:
+          (leaveDays[approval.leaveType] ?? 0) + approval.days,
+      };
+
+      const body = {
+        leaveDays: newLeaveDays,
+        approval: null,
+      };
+
+      await axios.put(Config.API_URL + routes.users + id, body, {
+        withCredentials: true,
+      });
+      setDisabled(true);
+      messageApi.success("The request has been approved successfully.");
+    } catch (error) {
+      setDisabled(false);
+      messageApi.error(error?.response.data.message);
+    }
   };
 
-  const Reject = () => {
-    messageApi.error("The request has been rejected.");
-    setDisabled(true);
+  const Reject = async () => {
+    try {
+      const body = { approval: null };
+      await axios.put(Config.API_URL + routes.users + id, body, {
+        withCredentials: true,
+      });
+      setDisabled(true);
+      messageApi.error("The request has been rejected.");
+    } catch (error) {
+      setDisabled(false);
+      messageApi.error(error?.response.data.message);
+    }
   };
 
   return (

@@ -14,8 +14,8 @@ export const profileItems = [
 ];
 
 export const accountItems = [
-  { key: "userName", label: "Username" },
-  { key: "passWord", label: "Password" },
+  { key: "email", label: "Email" },
+  { key: "password", label: "Password" },
 ];
 
 export const leaveDayItems = [

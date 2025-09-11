@@ -1,7 +1,7 @@
 import { Button, Divider, Flex } from "antd";
 import { useActionStore } from "../../store/store";
 
-export const ButtonLogin = ({ onLogin, adminAccount, employeeAccount }) => {
+export const ButtonLogin = ({ adminAccount, employeeAccount }) => {
   const { loading, disabled } = useActionStore();
 
   const accountItem = [
@@ -11,7 +11,7 @@ export const ButtonLogin = ({ onLogin, adminAccount, employeeAccount }) => {
 
   return (
     <Flex vertical gap="middle" style={{ width: "100%" }}>
-      <Button type="primary" loading={loading} onClick={onLogin}>
+      <Button htmlType="submit" type="primary" loading={loading}>
         Login
       </Button>
       <Divider plain>Login with</Divider>

@@ -7,7 +7,6 @@ import { LoginForm } from "./auth";
 
 export default function HomePage() {
   return (
-    <>
       <ConfigTheme>
         <Layout className="h-screen relative">
           <Content width="100%" className="grid place-content-center">
@@ -18,6 +17,5 @@ export default function HomePage() {
           </Content>
         </Layout>
       </ConfigTheme>
-    </>
   );
 }
