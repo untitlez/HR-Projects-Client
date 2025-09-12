@@ -1,9 +1,15 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { Card, Layout } from "antd";
 const { Header, Sider, Content } = Layout;
 
+import { Config } from "../../lib/config";
+import { routes } from "../../lib/routes";
+import { useSession } from "../../lib/session";
 import { useMenuStore } from "../../store/store";
 import { menuItems } from "../employee/constants/menuItem";
-import { leaveDays, personal } from "./constants/personalData";
+import { leaveDays } from "./constants/personalData";
 
 import { ConfigTheme } from "../../components/ConfigTheme";
 import { ToggleTheme } from "../../components/ToggleTheme";
@@ -13,7 +19,25 @@ import { MyProfile } from "./MyProfile";
 import { LeaveForm } from "./LeaveForm";
 
 export default function EmployeeHome() {
+  const navigate = useNavigate();
+  const [personal, setPersonal] = useState([]);
   const { tabsMenu } = useMenuStore();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const session = await useSession();
+      if (!session || session.role !== "employee") return navigate("/");
+
+      const { data } = await axios.get(
+        Config.API_URL + routes.users + session.id,
+        {
+          withCredentials: true,
+        }
+      );
+      setPersonal(data);
+    };
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -46,7 +70,7 @@ export default function EmployeeHome() {
             {/* Table  */}
             <Content style={layoutStyle.content}>
               {tabsMenu.type === "request" ? (
-                <LeaveForm personal={personal} />
+                <LeaveForm id={id} personal={personal} />
               ) : (
                 <div>
                   <MyProfile

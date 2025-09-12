@@ -1,12 +1,19 @@
+import { useState } from "react";
+import axios from "axios";
 import { Button, Form, message, Modal } from "antd";
-import { useActionStore } from "../../store/store";
 
-import { SuccessPage } from "../../components/SuccessPage";
+import { useActionStore } from "../../store/store";
+import { Config } from "../../lib/config";
+import { routes } from "../../lib/routes";
 import { LeaveFormItem } from "./constants/inputItem";
 
-export const LeaveForm = ({ personal }) => {
+import { SuccessPage } from "../../components/SuccessPage";
+
+export const LeaveForm = ({ id, personal }) => {
   const [form] = Form.useForm();
   const [messageApi, contextHolder] = message.useMessage();
+  const [value, setValue] = useState();
+
   const {
     loading,
     setLoading,
@@ -16,7 +23,8 @@ export const LeaveForm = ({ personal }) => {
     setIsModalOpen,
   } = useActionStore();
 
-  const onFinish = () => {
+  const onFinish = (formValue) => {
+    setValue(formValue);
     setLoading(true);
     setIsModalOpen(true);
   };
@@ -25,10 +33,26 @@ export const LeaveForm = ({ personal }) => {
     messageApi.error("Please complete all required fields.");
   };
 
-  const handleOk = () => {
-    setIsSubmitted(true);
-    setIsModalOpen(false);
-    setLoading(false);
+  const handleOk = async () => {
+    try {
+      const body = {
+        approval: {
+          days: value.days,
+          note: value.note,
+          leaveDate: new Date().toISOString(),
+          leaveType: value.leaveType,
+        },
+      };
+      await axios.put(Config.API_URL + routes.users + id, body, {
+        withCredentials: true,
+      });
+      setIsSubmitted(true);
+    } catch (error) {
+      messageApi.error(error?.response.data.message);
+    } finally {
+      setIsModalOpen(false);
+      setLoading(false);
+    }
   };
 
   const handleCancel = () => {

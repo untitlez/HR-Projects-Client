@@ -1,5 +1,10 @@
+import { useState } from "react";
 import { Form, message, Modal } from "antd";
 import dayjs from "dayjs";
+import axios from "axios";
+
+import { Config } from "../../lib/config";
+import { routes } from "../../lib/routes";
 import { useActionStore } from "../../store/store";
 
 import { SubmitForm } from "../../components/admin/SubmitForm";
@@ -8,6 +13,7 @@ import { JobSection, PersonalSection } from "./constants/inputItem";
 
 export const AdminForm = () => {
   const [form] = Form.useForm();
+  const [value, setValue] = useState();
   const [messageApi, contextHolder] = message.useMessage();
   const {
     loading,
@@ -18,7 +24,8 @@ export const AdminForm = () => {
     setIsModalOpen,
   } = useActionStore();
 
-  const onFinish = () => {
+  const onFinish = (formValue) => {
+    setValue(formValue);
     setLoading(true);
     setIsModalOpen(true);
   };
@@ -49,20 +56,30 @@ export const AdminForm = () => {
       salary: 12000,
     });
     messageApi.success(
-      "Form has been auto-filled. You can make changes if needed.",
+      "Form has been auto-filled. You can make changes if needed."
     );
   };
 
-  const handleOk = () => {
-    setIsSubmitted(true);
+  const handleOk = async () => {
+    try {
+      await axios.post(Config.API_URL + routes.users, value, {
+        withCredentials: true,
+      });
+      setIsSubmitted(true);
+    } catch (error) {
+      messageApi.error(error.response.data.message);
+    } finally {
+      setIsModalOpen(false);
+      setLoading(false);
+    }
+  };
+
+  const handleCancel = () => {
+    setValue("");
     setIsModalOpen(false);
     setLoading(false);
   };
 
-  const handleCancel = () => {
-    setIsModalOpen(false);
-    setLoading(false);
-  };
   return (
     <>
       {contextHolder}

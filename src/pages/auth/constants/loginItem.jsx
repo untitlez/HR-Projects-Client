@@ -3,9 +3,9 @@ import { LockOutlined, UserOutlined } from "@ant-design/icons";
 
 export const loginItem = [
   {
-    name: "username",
-    rules: [{ required: true, message: "Please input your Username!" }],
-    input: <Input prefix={<UserOutlined />} placeholder="Username" />,
+    name: "email",
+    rules: [{ required: true, message: "Please input your Email!" }],
+    input: <Input prefix={<UserOutlined />} placeholder="email" />,
   },
   {
     name: "password",

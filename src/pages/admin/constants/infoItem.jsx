@@ -115,27 +115,29 @@ export const leaveColumns = [
   {
     title: "Leave Type",
     key: "leaveType",
-    render: (_, record) => record.approval?.leaveType || null,
+    render: (_, record) => record.approval?.leaveType ?? null,
   },
   {
     title: "Days",
     key: "days",
-    render: (_, record) => record.approval?.days || null,
+    render: (_, record) => record.approval?.days ?? null,
   },
   {
     title: "Leave Date",
     key: "leaveDate",
-    render: (_, record) => record.approval?.leaveDate || null,
+    render: (_, record) => record.approval?.leaveDate ?? null,
   },
   {
     title: "Note",
     key: "note",
     responsive: ["xl"],
-    render: (_, record) => record.approval?.note || null,
+    render: (_, record) => record.approval?.note ?? null,
   },
   {
     title: "Action",
     key: "action",
-    render: () => <ApprovalConfirm />,
+    render: (_, record) => (
+      <ApprovalConfirm id={record.id} approval={record.approval} leaveDays={record.leaveDays} />
+    ),
   },
 ];

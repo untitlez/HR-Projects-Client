@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
 import { Layout } from "antd";
 const { Header, Sider, Content } = Layout;
+import { Button, notification, Space } from "antd";
+
+import { Config } from "../../lib/config";
+import { routes } from "../../lib/routes";
+import { useSession } from "../../lib/session";
 import { useMenuStore } from "../../store/store";
 import { menuItems } from "../admin/constants/menuItem";
 
@@ -14,59 +19,85 @@ import { AdminForm } from "./AdminForm";
 import { AdminInfo } from "./AdminInfo";
 
 export default function AdminHome() {
-  const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
   const { tabsMenu } = useMenuStore();
-  const URL = "/data.json";
+  const [users, setUsers] = useState([]);
+  const [api, contextHolder] = notification.useNotification();
+
+  const openNotification = () => {
+    const btn = (
+      <Space>
+        <Button
+          type="primary"
+          size="small"
+          onClick={() => window.location.reload()}
+        >
+          Refresh
+        </Button>
+      </Space>
+    );
+
+    api.error({
+      message: "Something went wrong.",
+      description: "Please try again.",
+      btn,
+    });
+  };
 
   useEffect(() => {
-    async function fetchData() {
+    const fetchData = async () => {
+      const session = await useSession();
+      if (!session || session.role !== "admin") return navigate("/");
+
       try {
-        const { data } = await axios.get(URL);
+        const { data } = await axios.get(Config.API_URL + routes.users, {
+          withCredentials: true,
+        });
         setUsers(data);
-      } catch (error) {
-        throw new error("Sorry, something went wrong.", error);
+      } catch {
+        openNotification();
       }
-    }
+    };
+
     fetchData();
   }, []);
 
   return (
-    <>
-      <ConfigTheme>
-        <Layout style={layoutStyle.layout}>
-          {/* Menu Bar  */}
-          <Sider width="20%" breakpoint="xl" style={layoutStyle.sider}>
-            <MenuBar
-              menuItems={menuItems}
-              type="reports"
-              label="All Employee"
-              theme="light"
-              defaultSelectedKeys="sub3-1"
-            />
-          </Sider>
+    <ConfigTheme>
+      {contextHolder}
+      <Layout style={layoutStyle.layout}>
+        {/* Menu Bar  */}
+        <Sider width="20%" breakpoint="xl" style={layoutStyle.sider}>
+          <MenuBar
+            menuItems={menuItems}
+            type="reports"
+            label="All Employee"
+            theme="light"
+            defaultSelectedKeys="sub3-1"
+          />
+        </Sider>
 
-          <Layout>
-            {/* Header & Toggle Theme & Account  */}
-            <Header style={layoutStyle.header}>
-              <p style={layoutStyle.textHead}>{tabsMenu.label}</p>
-              <div style={layoutStyle.account}>
-                <ToggleTheme />
-                <Account fullName="Shiba" position="Admin Officer" />
-              </div>
-            </Header>
+        <Layout>
+          {/* Header & Toggle Theme & Account  */}
+          <Header style={layoutStyle.header}>
+            <p style={layoutStyle.textHead}>{tabsMenu.label}</p>
+            <div style={layoutStyle.account}>
+              <ToggleTheme />
+              <Account fullName="Shiba Inu" position="Admin Officer" />
+            </div>
+          </Header>
 
-            {/* Table  */}
-            <Content style={layoutStyle.content}>
-              {tabsMenu.type === "new employee" ? (
-                <AdminForm />
-              ) : (
-                <AdminInfo users={users} tabsMenu={tabsMenu} />
-              )}
-            </Content>
-          </Layout>
+          {/* Table  */}
+          <Content style={layoutStyle.content}>
+            {tabsMenu.type === "new employee" ? (
+              <AdminForm />
+            ) : (
+              <AdminInfo users={users} tabsMenu={tabsMenu} />
+            )}
+          </Content>
         </Layout>
-      </ConfigTheme>
-    </>
+      </Layout>
+    </ConfigTheme>
   );
 }
 
@@ -75,7 +106,7 @@ const layoutStyle = {
   layout: {
     gap: 8,
     padding: 32,
-    minHeight: "100vh",
+    height: "100vh",
   },
   sider: {
     background: "none",
