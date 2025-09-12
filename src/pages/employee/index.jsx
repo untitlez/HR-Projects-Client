@@ -70,7 +70,7 @@ export default function EmployeeHome() {
             {/* Table  */}
             <Content style={layoutStyle.content}>
               {tabsMenu.type === "request" ? (
-                <LeaveForm id={id} personal={personal} />
+                <LeaveForm id={personal.id} personal={personal} />
               ) : (
                 <div>
                   <MyProfile
