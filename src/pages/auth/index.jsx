@@ -59,15 +59,11 @@ export const LoginForm = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const { data } = await axios.get(Config.API_URL + routes.users, {
-          withCredentials: true,
-        });
-        const getEmail = data.map((item) => item.email);
-        setEmployeeEmail(getEmail);
-      } catch (error) {
-        console.error("error", error?.response.data.message);
-      }
+      const { data } = await axios.get(Config.API_URL + routes.users, {
+        withCredentials: true,
+      });
+      const getEmail = data.map((item) => item.email);
+      setEmployeeEmail(getEmail);
     };
     fetchData();
   }, []);
