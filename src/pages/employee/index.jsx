@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Card, Layout } from "antd";
 const { Header, Sider, Content } = Layout;
 
+import { Config } from "../../lib/config";
+import { routes } from "../../lib/routes";
+import { useSession } from "../../lib/session";
 import { useMenuStore } from "../../store/store";
 import { menuItems } from "../employee/constants/menuItem";
 import { leaveDays } from "./constants/personalData";
-import { Config } from "../../lib/config";
-import { routes } from "../../lib/routes";
 
 import { ConfigTheme } from "../../components/ConfigTheme";
 import { ToggleTheme } from "../../components/ToggleTheme";
@@ -18,22 +19,25 @@ import { MyProfile } from "./MyProfile";
 import { LeaveForm } from "./LeaveForm";
 
 export default function EmployeeHome() {
+  const navigate = useNavigate();
   const [personal, setPersonal] = useState([]);
   const { tabsMenu } = useMenuStore();
-  const [searchParams] = useSearchParams();
-  const id = searchParams.get("id");
 
   useEffect(() => {
-    if (!id) return;
-
     const fetchData = async () => {
-      const { data } = await axios.get(Config.API_URL + routes.users + id, {
-        withCredentials: true,
-      });
+      const session = await useSession();
+      if (!session || session.role !== "employee") return navigate("/");
+
+      const { data } = await axios.get(
+        Config.API_URL + routes.users + session.id,
+        {
+          withCredentials: true,
+        }
+      );
       setPersonal(data);
     };
     fetchData();
-  }, [id]);
+  }, []);
 
   return (
     <>

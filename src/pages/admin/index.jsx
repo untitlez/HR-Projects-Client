@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
 import { Layout } from "antd";
 const { Header, Sider, Content } = Layout;
 import { Button, notification, Space } from "antd";
+
 import { Config } from "../../lib/config";
 import { routes } from "../../lib/routes";
+import { useSession } from "../../lib/session";
 import { useMenuStore } from "../../store/store";
 import { menuItems } from "../admin/constants/menuItem";
 
@@ -17,6 +19,7 @@ import { AdminForm } from "./AdminForm";
 import { AdminInfo } from "./AdminInfo";
 
 export default function AdminHome() {
+  const navigate = useNavigate();
   const { tabsMenu } = useMenuStore();
   const [users, setUsers] = useState([]);
   const [api, contextHolder] = notification.useNotification();
@@ -43,6 +46,9 @@ export default function AdminHome() {
 
   useEffect(() => {
     const fetchData = async () => {
+      const session = await useSession();
+      if (!session || session.role !== "admin") return navigate("/");
+
       try {
         const { data } = await axios.get(Config.API_URL + routes.users, {
           withCredentials: true,
@@ -52,6 +58,7 @@ export default function AdminHome() {
         openNotification();
       }
     };
+
     fetchData();
   }, []);
 
@@ -76,7 +83,7 @@ export default function AdminHome() {
             <p style={layoutStyle.textHead}>{tabsMenu.label}</p>
             <div style={layoutStyle.account}>
               <ToggleTheme />
-              <Account fullName="Shiba" position="Admin Officer" />
+              <Account fullName="Shiba Inu" position="Admin Officer" />
             </div>
           </Header>
 

@@ -45,10 +45,7 @@ export const LoginForm = () => {
         { withCredentials: true }
       );
 
-      console.log("data", data);
-      data.role === "admin"
-        ? navigate("/admin")
-        : navigate(`/employee?id=${data.id}`);
+      data.role === "admin" ? navigate("/admin") : navigate("/employee");
     } catch (error) {
       api.error({
         message: "Login failed",
