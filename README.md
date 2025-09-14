@@ -2,8 +2,6 @@
 
 > Minimal, fast, and ready-to-code React setup for internal HR tools using Vite.
 
----
-
 ## ✨ Features
 
 - 🧑‍💻 Practice project for learning React.js + Ant Design using Vite setup.
@@ -12,10 +10,7 @@
 - ✅ ESLint pre-configured for best practices  
 - 🔧 Easy to extend with TypeScript and Prettier  
 
----
-
 ## 🚀 Getting Started
-
 ### 1. Clone the repo
 
 ```bash
@@ -38,36 +33,42 @@ npm run dev
 http://localhost:3000
 ```
 
----
-
-## 🧱 Project Structure
+## 📂 Project Structure
 
 ```plaintext
 /src
-├── App.jsx
-├── main.jsx
-├── index.css
+├── App.jsx                 
+├── main.jsx                
+├── index.css               
 │
-├── store/
-│   └── store.js
+├── store/                  
+│   └── store.jsx
 │
-├── components/
+├── lib/                    
+│   ├── config.jsx          
+│   ├── routes.jsx          
+│   └── session.jsx         
+│
+├── components/             
 │   ├── Account.jsx
-│   ├── BackGround.jsx
+│   ├── Background.jsx
 │   ├── ConfigTheme.jsx
 │   ├── MenuBar.jsx
 │   ├── SuccessPage.jsx
 │   ├── ToggleTheme.jsx
-│   ├── admin/
+│   │
+│   ├── admin/              
 │   │   ├── ApprovalConfirm.jsx
 │   │   ├── SubmitForm.jsx
 │   │   └── UsersInfo.jsx
-│   └── auth/
+│   │
+│   └── auth/               
 │       └── ButtonLogin.jsx
 │
-├── pages/
-│   ├── index.jsx
-│   ├── admin/
+├── pages/                  
+│   ├── index.jsx           
+│   │
+│   ├── admin/              
 │   │   ├── index.jsx
 │   │   ├── AdminForm.jsx
 │   │   ├── AdminInfo.jsx
@@ -75,12 +76,14 @@ http://localhost:3000
 │   │       ├── infoItem.jsx
 │   │       ├── inputItem.jsx
 │   │       └── menuItem.jsx
-│   ├── auth/
+│   │
+│   ├── auth/               
 │   │   ├── index.jsx
 │   │   └── constants/
 │   │       ├── accountData.jsx
 │   │       └── loginItem.jsx
-│   └── employee/
+│   │
+│   └── employee/           
 │       ├── index.jsx
 │       ├── LeaveForm.jsx
 │       ├── MyProfile.jsx
@@ -89,8 +92,5 @@ http://localhost:3000
 │           ├── inputItem.jsx
 │           ├── menuItem.jsx
 │           └── personalData.jsx
-```
-
----
-
-
+│
+└── .env
