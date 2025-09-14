@@ -4,11 +4,13 @@
 
 ## ✨ Features
 
--⚡ Vite + React 18 – Super fast development with HMR
+- ⚡ Vite + React 18 – Super fast development with HMR
 - 🎨 Ant Design + Tailwind
 - 🔧 Pre-configured ESLint + Prettier
 - 🔑 Session Handling
 - 📂 Clean Project Structure
+
+---
 
 ## 🚀 Getting Started
 ### 1. Clone the repo
@@ -39,8 +41,9 @@ npm run dev
 http://localhost:3000
 ```
 
-## 📂 Project Structure
+---
 
+## 📂 Project Structure
 ```plaintext
 /src
 ├── App.jsx                 
@@ -100,3 +103,4 @@ http://localhost:3000
 │           └── personalData.jsx
 │
 └── .env
+```
