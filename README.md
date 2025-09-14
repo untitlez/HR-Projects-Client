@@ -4,11 +4,11 @@
 
 ## ✨ Features
 
-- 🧑‍💻 Practice project for learning React.js + Ant Design using Vite setup.
-- ⚡ Instant Hot Module Replacement (HMR) with Vite  
-- 🔌 Plugin support for Babel and SWC  
-- ✅ ESLint pre-configured for best practices  
-- 🔧 Easy to extend with TypeScript and Prettier  
+-⚡ Vite + React 18 – Super fast development with HMR
+- 🎨 Ant Design + Tailwind
+- 🔧 Pre-configured ESLint + Prettier
+- 🔑 Session Handling
+- 📂 Clean Project Structure
 
 ## 🚀 Getting Started
 ### 1. Clone the repo
@@ -23,7 +23,13 @@ cd HR-Projects
 npm install
 ```
 
-### 3. Start the development server
+### 3. Setup Environment Variables
+Create a .env file in the root folder:
+```plaintext
+VITE_API_URL=http://localhost:5000
+```
+
+### 4. Start the development server
 ```bash
 npm run dev
 ```
