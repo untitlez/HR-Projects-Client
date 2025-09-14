@@ -27,7 +27,7 @@ npm install
 
 ### 3. Setup Environment Variables
 Create a .env file in the root folder:
-```plaintext
+```env
 VITE_API_URL=http://localhost:5000
 ```
 
